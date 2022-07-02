@@ -46,6 +46,22 @@ header .list-items{
 
 .list-items li a{
     color: #fff;
+    position: relative;
+}
+
+.list-items li a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.list-items li a:hover::after{
+    width: 100%;
 }
 
 header .menu{
@@ -109,7 +125,6 @@ header .menu{
 
 .btn:hover::before{
     height: 100%;
-    color: #1b428a;
 }
 
 #quem-somos{
@@ -149,7 +164,7 @@ header .menu{
 }
 
 #servicos{
-    flex-direction: column;
+   flex-direction: column;
    padding-top: 50px;
    padding-bottom: 100px;
 }
@@ -176,14 +191,17 @@ header .menu{
     height: 50px;
     text-align: center;
     margin-top: 20px;
-    line-height: 50px;
-    padding: 5px 10px;
+    line-height: 60px;
+    padding: 8px 10px;
     color: #122A57;
-    font-size: 12px;
+    box-shadow:  0 0 10px 0 #396fd3;
+    font-size: 15px;
     text-decoration: none;
     font-weight: 700;
     font-size: large;
 }
+
+
 
 .item-servicos p{
     font-weight: 700;
